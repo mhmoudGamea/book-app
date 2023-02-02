@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/views/widgets/book_list_view_item.dart';
 import './custom_text_field.dart';
 import 'search_result_list_view.dart';
 
