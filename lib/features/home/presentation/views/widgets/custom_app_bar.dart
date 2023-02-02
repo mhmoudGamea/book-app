@@ -1,5 +1,7 @@
+import 'package:book_app/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -14,10 +16,12 @@ class CustomAppBar extends StatelessWidget {
           IconButton(
             padding: const EdgeInsets.only(bottom: 15, right: 2),
             constraints: const BoxConstraints(),
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(SearchView.rn);
+            },
             icon: const Icon(
               FontAwesomeIcons.magnifyingGlass,
-              size: 23,
+              size: 21,
               color: Colors.white,
             ),
           ),

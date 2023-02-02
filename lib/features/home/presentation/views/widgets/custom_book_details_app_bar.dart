@@ -17,7 +17,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
           },
           icon: const Icon(
             FontAwesomeIcons.xmark,
-            size: 23,
+            size: 22,
             color: Colors.white,
           ),
         ),
@@ -28,7 +28,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
           onPressed: () {},
           icon: const Icon(
             FontAwesomeIcons.cartShopping,
-            size: 22,
+            size: 20,
             color: Colors.white,
           ),
         ),

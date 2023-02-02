@@ -2,6 +2,7 @@ import 'package:book_app/features/home/presentation/views/book_details_view.dart
 import 'package:go_router/go_router.dart';
 
 import '../../features/home/presentation/views/home_view.dart';
+import '../../features/search/presentation/views/search_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRoutes {
@@ -23,6 +24,10 @@ abstract class AppRoutes {
         path: BookDetailsView.rn,
         builder: (context, state) => const BookDetailsView(),
       ),
+      GoRoute(
+        path: SearchView.rn,
+        builder: (context, state) => const SearchView(),
+      )
     ],
   );
 }
