@@ -1,9 +1,11 @@
+import 'package:book_app/core/utils/api_service.dart';
 import 'package:book_app/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
 
 import './constants.dart';
 
 void main() {
+  ApiService.initializeDio();
   runApp(const BookApp());
 }
 

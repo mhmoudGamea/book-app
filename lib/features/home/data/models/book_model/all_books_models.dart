@@ -1,4 +1,4 @@
-import 'book_model/book_model.dart';
+import 'book_model.dart';
 
 class AllBooksModels {
   static List<BookModel> _bookModelList = [];
