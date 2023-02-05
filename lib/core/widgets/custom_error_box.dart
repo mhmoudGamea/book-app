@@ -1,6 +1,5 @@
 import 'package:book_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomErrorBox extends StatelessWidget {
   final String errorMessage;
@@ -14,30 +13,18 @@ class CustomErrorBox extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: const Color.fromARGB(255, 220, 116, 116),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Text(
-          errorMessage,
-          style: Styles.description.copyWith(color: Colors.black),
+        child: Wrap(
+          children: [
+            Text(
+              errorMessage,
+              style: Styles.description.copyWith(color: Colors.white),
+            )
+          ],
         ),
       ),
     );
   }
 }
-/*
-
-Row(
-          children: [
-            const Icon(
-              FontAwesomeIcons.squareXmark,
-              size: 20,
-              color: Colors.red,
-            ),
-            Text(
-              errorMessage,
-              style: Styles.description.copyWith(color: Colors.black),
-            )
-          ],
-        )
-*/

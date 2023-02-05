@@ -1,4 +1,3 @@
-import 'package:book_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookCover extends StatelessWidget {
@@ -11,7 +10,6 @@ class BookCover extends StatelessWidget {
       aspectRatio: 2.7 / 4,
       child: Container(
         decoration: BoxDecoration(
-          //color: const Color(0xfff9250a),
           borderRadius: BorderRadius.circular(10),
         ),
         child: ClipRRect(
@@ -24,4 +22,3 @@ class BookCover extends StatelessWidget {
     );
   }
 }
-//items[0].volumeInfo.imageLinks
