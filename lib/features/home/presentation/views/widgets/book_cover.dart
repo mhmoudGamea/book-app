@@ -1,7 +1,9 @@
+import 'package:book_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookCover extends StatelessWidget {
-  const BookCover({super.key});
+  final String imageUrl;
+  const BookCover({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,12 @@ class BookCover extends StatelessWidget {
         ),
         child: ClipRRect(
             borderRadius: BorderRadius.circular(15),
-            child: Image.asset(
-              'assets/images/snipp.png',
+            child: Image.network(
+              imageUrl,
               fit: BoxFit.cover,
             )),
       ),
     );
   }
 }
+//items[0].volumeInfo.imageLinks
