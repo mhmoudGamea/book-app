@@ -1,16 +1,23 @@
-# book_app
+<div style="display:flex; justify-content: center; align-items: center">
+  <img src='demo%20screenshots/splash.png' width='230'/>
+  <img src='demo%20screenshots/home.png' width='230'/>
+  <img src='demo%20screenshots/details.png' width='230'/>
+  <img src='demo%20screenshots/webView.png' width='230'/>
+</div>
 
-A new Flutter project.
+<hr/>
+<h4>what i learn</h4>
 
-## Getting Started
+<ul>
+  <li>i learn how to use MVVM pattern to build this app</li>
+  <li>practice on using BlocProvider, States and so on</li>
+  <li>how to use animation on splashView</li>
+  <li>how to use CustomScrollView widget and it's slivers</li>
+  <li>using a new package cachedNetworkImage to cache network images, fade them in a good way</li>
+  <li>make some methods to return more than one type by using Dartz package</li>
+  <li>using goRouter package instead of normal routes in main(flutter team recommend this)</li>
+</ul>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<hr/>
+<h4>what i add</h4>
+<li>webView to make user able to see the preview of the book on the web</li>
