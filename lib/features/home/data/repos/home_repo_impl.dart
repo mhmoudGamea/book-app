@@ -30,11 +30,7 @@ class HomeRepoImpl implements HomeRepo {
     try {
       final data = await ApiService.get(
           endPoint:
-              'volumes?Filtering=free-ebboks&Sorting=newest&q=subject:programming');
-
-      // List<BookModel> bookModelList = [];
-      // data['items']
-      //     .forEach((item) => bookModelList.add(BookModel.fromJson(item)));
+              'volumes?Filtering=free-ebboks&Sorting=newest&q=computer science');
       AllBooksModels.fromJson(data);
 
       return right(AllBooksModels.getBookModelList);

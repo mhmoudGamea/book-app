@@ -23,7 +23,10 @@ class CustomBookDetailsSection extends StatelessWidget {
         const SizedBox(height: 3),
         const Text('Rudyard Kipling', style: Styles.description),
         const SizedBox(height: 3),
-        const RatingBox(),
+        RatingBox(
+          rating: 12,
+          count: 25,
+        ),
         const SizedBox(height: 30),
         const CustomBoxButton(),
       ],

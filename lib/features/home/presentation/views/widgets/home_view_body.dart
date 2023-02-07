@@ -19,12 +19,12 @@ class HomeViewBody extends StatelessWidget {
             children: const [
               SizedBox(height: 5),
               CustomAppBar(),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
               CustomListView(fraction: 0.25),
               SizedBox(height: 25),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Text('Best Seller', style: Styles.titleMedium),
+                child: Text('Newest Books', style: Styles.titleMedium),
               ),
               SizedBox(height: 8),
             ],

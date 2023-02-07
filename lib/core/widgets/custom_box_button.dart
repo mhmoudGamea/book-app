@@ -20,7 +20,10 @@ class CustomBoxButton extends StatelessWidget {
                   topLeft: Radius.circular(15),
                   bottomLeft: Radius.circular(15),
                 ),
-                widget: PriceBox(textColor: Colors.black)),
+                widget: PriceBox(
+                  textColor: Colors.black,
+                  price: 'Free',
+                )),
           ),
           Expanded(
             flex: 1,

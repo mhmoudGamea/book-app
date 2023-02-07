@@ -17,7 +17,9 @@ class HomeView extends StatelessWidget {
         BlocProvider(
             create: (context) =>
                 CoverBooksCubit(HomeRepoImpl())..getCoverBook()),
-        BlocProvider(create: (context) => NewestBookCubit(HomeRepoImpl()))
+        BlocProvider(
+            create: (context) =>
+                NewestBookCubit(HomeRepoImpl())..getNewestBook())
       ],
       child: const Scaffold(
         body: SafeArea(child: HomeViewBody()),

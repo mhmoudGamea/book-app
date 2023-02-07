@@ -5,7 +5,8 @@ import '../../../../../core/utils/styles.dart';
 
 class PriceBox extends StatelessWidget {
   final Color textColor;
-  const PriceBox({super.key, required this.textColor});
+  final String price;
+  const PriceBox({super.key, required this.textColor, required this.price});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class PriceBox extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          '19.99',
+          price,
           style: Styles.titleMedium
               .copyWith(fontWeight: FontWeight.w900, color: textColor),
         ),
