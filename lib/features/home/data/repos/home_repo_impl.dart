@@ -5,8 +5,6 @@ import 'package:book_app/features/home/data/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-import '../models/book_model/all_books_models.dart';
-
 class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<BookModel>>> fetchBookCovers() async {
@@ -14,9 +12,11 @@ class HomeRepoImpl implements HomeRepo {
       final data = await ApiService.get(
           endPoint: 'volumes?Filtering=free-ebboks&q=subject:programming');
 
-      AllBooksModels.fromJson(data);
+      List<BookModel> bookList = [];
 
-      return right(AllBooksModels.getBookModelList);
+      data['items'].forEach((item) => {bookList.add(BookModel.fromJson(item))});
+
+      return right(bookList);
     } catch (error) {
       if (error is DioError) {
         return left(ServerSideError.fromDioError(error));
@@ -31,9 +31,31 @@ class HomeRepoImpl implements HomeRepo {
       final data = await ApiService.get(
           endPoint:
               'volumes?Filtering=free-ebboks&Sorting=newest&q=computer science');
-      AllBooksModels.fromJson(data);
+      List<BookModel> bookList = [];
 
-      return right(AllBooksModels.getBookModelList);
+      data['items'].forEach((item) => {bookList.add(BookModel.fromJson(item))});
+
+      return right(bookList);
+    } catch (error) {
+      if (error is DioError) {
+        return left(ServerSideError.fromDioError(error));
+      }
+      return left(ServerSideError(error.toString()));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<BookModel>>> fetchRelevanceBooks(
+      {required String category}) async {
+    try {
+      final data = await ApiService.get(
+          endPoint:
+              'volumes?Filtering=free-ebboks&Sorting=relevance&q=subject:programming');
+      List<BookModel> bookList = [];
+
+      data['items'].forEach((item) => {bookList.add(BookModel.fromJson(item))});
+
+      return right(bookList);
     } catch (error) {
       if (error is DioError) {
         return left(ServerSideError.fromDioError(error));
