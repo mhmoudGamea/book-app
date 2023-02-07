@@ -1,11 +1,11 @@
 import 'package:book_app/core/utils/styles.dart';
 import 'package:book_app/core/widgets/custom_button.dart';
 import 'package:book_app/core/widgets/custom_price_box.dart';
-import 'package:book_app/features/home/presentation/views/widgets/price_box.dart';
 import 'package:flutter/material.dart';
 
 class CustomBoxButton extends StatelessWidget {
-  const CustomBoxButton({super.key});
+  final String previewUrl;
+  const CustomBoxButton({super.key, required this.previewUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,8 @@ class CustomBoxButton extends StatelessWidget {
                   'Preview',
                   style: Styles.titleMedium
                       .copyWith(fontWeight: FontWeight.w500, fontSize: 17),
-                )),
+                ),
+                previewUrl: previewUrl),
           ),
         ],
       ),

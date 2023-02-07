@@ -32,7 +32,7 @@ class CustomBookDetailsSection extends StatelessWidget {
             count: bookModel.volumeInfo!.ratingsCount ?? 0,
           ),
         const SizedBox(height: 30),
-        const CustomBoxButton(),
+        CustomBoxButton(previewUrl: bookModel.volumeInfo!.canonicalVolumeLink!),
       ],
     );
   }
