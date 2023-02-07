@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import 'custom_list_view.dart';
+import 'custom_list_view_details_cover.dart';
 
 class CustomSimilarBooks extends StatelessWidget {
   const CustomSimilarBooks({super.key});
@@ -19,7 +19,7 @@ class CustomSimilarBooks extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        const CustomListView(fraction: 0.15),
+        const CustomListViewDetailsCover(fraction: 0.15),
         const SizedBox(height: 20),
       ],
     );

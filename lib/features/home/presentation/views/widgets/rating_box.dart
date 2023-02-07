@@ -4,7 +4,7 @@ import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
 
 class RatingBox extends StatelessWidget {
-  final int rating;
+  final num rating;
   final int count;
   const RatingBox({super.key, required this.rating, required this.count});
 

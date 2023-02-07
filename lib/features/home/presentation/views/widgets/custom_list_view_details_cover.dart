@@ -1,19 +1,21 @@
-import 'package:book_app/core/widgets/custom_circle_indicator.dart';
-import 'package:book_app/core/widgets/custom_error_box.dart';
-import 'package:book_app/features/home/presentation/view_models/Cover%20Book%20cubit/cover_books_cubit.dart';
-import 'package:book_app/features/home/presentation/views/widgets/book_cover.dart';
+import 'package:book_app/features/home/presentation/view_models/similar%20book%20cubit/similar_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CustomListView extends StatelessWidget {
+import '../../../../../core/widgets/custom_circle_indicator.dart';
+import '../../../../../core/widgets/custom_error_box.dart';
+import '../../view_models/Cover Book cubit/cover_books_cubit.dart';
+import 'book_cover.dart';
+
+class CustomListViewDetailsCover extends StatelessWidget {
   final double fraction;
-  const CustomListView({Key? key, required this.fraction}) : super(key: key);
+  const CustomListViewDetailsCover({super.key, required this.fraction});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<CoverBooksCubit, CoverBooksState>(
+    return BlocBuilder<SimilarBooksCubit, SimilarBooksState>(
       builder: (context, state) {
-        if (state is CoverBooksSuccess) {
+        if (state is SimilarBooksSuccess) {
           return SizedBox(
             height: MediaQuery.of(context).size.height * fraction,
             child: ListView.separated(
@@ -26,7 +28,7 @@ class CustomListView extends StatelessWidget {
                       state.bookList[index].volumeInfo!.imageLinks!.thumbnail!),
             ),
           );
-        } else if (state is CoverBooksError) {
+        } else if (state is SimilarBooksFailure) {
           return CustomErrorBox(errorMessage: state.errorMessage);
         } else {
           return const CustomCircleIndicator();
